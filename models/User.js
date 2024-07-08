@@ -42,6 +42,10 @@ User.init(
         newUser.password = bcrypt.hash(newUser.password, 10);
         return newUser;
       },
+      beforeBulkCreate: async (newUser) => {
+        newUser.password = bcrypt.hash(newUser.password, 10);
+        return newUser;
+      },
     },
     // Model configuration
     sequelize,
