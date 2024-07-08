@@ -1,4 +1,5 @@
 // Imports
+const Comment = require("./Comment");
 const Post = require("./Post");
 const User = require("./User");
 
@@ -12,5 +13,19 @@ Post.belongsTo(User, {
   foreignKey: "userId",
 });
 
+// One user has many comments, and one comment has one user
+User.hasMany(Comment, {
+  foreignKey: "userId",
+  onDelete: "CASCADE",
+});
+
+Comment.belongsTo(User, {
+  foreignKey: "userId",
+});
+
 // Exports
-module.exports = {};
+module.exports = {
+  User,
+  Post,
+  Comment,
+};
