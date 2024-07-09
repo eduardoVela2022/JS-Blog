@@ -2,7 +2,7 @@
 const User = require("../models/User");
 
 // User seed data
-let userSeedData = [
+const userSeedData = [
   {
     username: "Alan García",
     password: "alanG@rcia2001",
@@ -19,7 +19,9 @@ let userSeedData = [
 
 // Creates the user seeds
 async function createUserSeeds() {
-  await User.bulkCreate(userSeedData);
+  await User.create(userSeedData[0]);
+  await User.create(userSeedData[1]);
+  await User.create(userSeedData[2]);
 }
 
 // Exports

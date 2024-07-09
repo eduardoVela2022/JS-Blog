@@ -16,11 +16,11 @@ async function createAllSeeds() {
 
   // Creates the post seeds
   await createPostSeeds();
-  console.log("\n --- User seeds created --- \n");
+  console.log("\n --- Post seeds created --- \n");
 
   // Creates the comment seeds
   await createCommentSeeds();
-  console.log("\n --- User seeds created --- \n");
+  console.log("\n --- Comment seeds created --- \n");
 
   // Ends process
   process.exit(0);

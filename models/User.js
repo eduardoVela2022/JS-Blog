@@ -39,11 +39,7 @@ User.init(
     hooks: {
       // Encrypts the new user's password
       beforeCreate: async (newUser) => {
-        newUser.password = bcrypt.hash(newUser.password, 10);
-        return newUser;
-      },
-      beforeBulkCreate: async (newUser) => {
-        newUser.password = bcrypt.hash(newUser.password, 10);
+        newUser.password = await bcrypt.hash(newUser.password, 10);
         return newUser;
       },
     },
