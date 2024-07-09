@@ -1,26 +1,34 @@
 // Imports
-const User = require("../models/User");
+const Comment = require("../models/Comment");
 
-// User seed data
-let userSeedData = [
+// Comment seed data
+let commentSeedData = [
   {
-    username: "Alan García",
-    password: "alanG@rcia2001",
+    content: "Comment #1",
+    userId: 1,
+    postId: 3,
   },
   {
-    username: "Jesse Rodriguez",
-    password: "j3sse#1999",
+    content: "Comment #2",
+    userId: 1,
+    postId: 4,
   },
   {
-    username: "Richard Torrez",
-    password: "T0rrez$2000",
+    content: "Comment #3",
+    userId: 1,
+    postId: 4,
+  },
+  {
+    content: "Comment #4",
+    userId: 1,
+    postId: 1,
   },
 ];
 
-// Creates the user seeds
-async function createUserSeeds() {
-  await User.bulkCreate(userSeedData);
+// Creates the comment seeds
+async function createCommentSeeds() {
+  await Comment.bulkCreate(commentSeedData);
 }
 
 // Exports
-module.exports = createUserSeeds;
+module.exports = createCommentSeeds;
