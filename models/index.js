@@ -23,6 +23,16 @@ Comment.belongsTo(User, {
   foreignKey: "userId",
 });
 
+// One post has many comments, and one comment has one post
+Post.hasMany(Comment, {
+  foreignKey: "postId",
+  onDelete: "CASCADE",
+});
+
+Comment.belongsTo(Post, {
+  foreignKey: "postId",
+});
+
 // Exports
 module.exports = {
   User,

@@ -28,6 +28,14 @@ Comment.init(
         key: "id",
       },
     },
+    // The post the comment belongs to
+    postId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "post",
+        key: "id",
+      },
+    },
   },
   {
     // Model configuration
