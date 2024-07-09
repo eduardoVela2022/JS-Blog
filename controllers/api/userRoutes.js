@@ -32,7 +32,10 @@ router.post("/login", async (req, res) => {
     if (!userData) {
       res
         .status(400)
-        .json({ message: "Incorrect email or password, please try again" });
+        .json({
+          message:
+            "The given email or password were incorrect. Please try again.",
+        });
       return;
     }
 
@@ -43,7 +46,10 @@ router.post("/login", async (req, res) => {
     if (!validPassword) {
       res
         .status(400)
-        .json({ message: "Incorrect email or password, please try again" });
+        .json({
+          message:
+            "The given email or password were incorrect. Please try again.",
+        });
       return;
     }
 
@@ -53,7 +59,7 @@ router.post("/login", async (req, res) => {
       req.session.logged_in = true;
 
       // Send success status
-      res.json({ user: userData, message: "You are now logged in!" });
+      res.json({ user: userData, message: "You were logged in successfully!" });
     });
   } catch (err) {
     // Send error status, if something went wrong
