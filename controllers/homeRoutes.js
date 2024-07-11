@@ -43,6 +43,7 @@ router.get("/dashboard", async (req, res) => {
 // This route is for the post view
 router.get("/post/:id", async (req, res) => {
   try {
+    console.log(req.params.id);
     // Gets the post with the given id, along with the username of the user that created it and its comments
     const postData = await Post.findByPk(req.params.id, {
       include: [
@@ -52,11 +53,12 @@ router.get("/post/:id", async (req, res) => {
     });
 
     // Converts the obtained posts into plain objects
-    const posts = postData.map((post) => post.get({ plain: true }));
+    const posts = postData.get({ plain: true });
 
     // Renders the post view with the obtained data
     res.status(200).json(posts);
   } catch (err) {
+    console.log(err);
     // Send error status, if something went wrong
     res.status(500).json(err);
   }
@@ -71,13 +73,13 @@ router.get("/login", (req, res) => {
   }
 
   // Else render the login view
-  res.status(200).json("Load login view");
+  res.status(200).json("Load log in view");
 });
 
 // This route is for the sign up view
 router.get("/sign-up", (req, res) => {
   // Render the sign up view
-  res.status(200).json("Load login view");
+  res.status(200).json("Load sign up view");
 });
 
 // Exports
