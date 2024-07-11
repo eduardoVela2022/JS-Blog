@@ -1,7 +1,6 @@
-const { Comment } = require("../../models");
-
 // Imports
 const router = require("express").Router();
+const { Comment } = require("../../models");
 
 // This route creates a new comment and stores it in the database
 router.post("/", async (req, res) => {

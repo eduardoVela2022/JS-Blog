@@ -1,7 +1,6 @@
-const { Post } = require("../../models");
-
 // Imports
 const router = require("express").Router();
+const { Post } = require("../../models");
 
 // This route creates a new post and stores it in the database
 router.post("/", async (req, res) => {
