@@ -73,13 +73,13 @@ router.get("/login", (req, res) => {
   }
 
   // Else render the login view
-  res.status(200).json("Load log in view");
+  res.render("login");
 });
 
 // This route is for the sign up view
 router.get("/sign-up", (req, res) => {
   // Render the sign up view
-  res.status(200).json("Load sign up view");
+  res.render("sign-up");
 });
 
 // Exports

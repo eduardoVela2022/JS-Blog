@@ -3,14 +3,6 @@
   gap: 3rem;
 }
 
-/* Post Container */
-.homepage-post-container {
-  padding: 1rem;
-  border: 1px solid #67e8f9;
-  border-radius: 15px;
-  background-color: #ecfeff;
-}
-
 /* Post Title And User  */
 .homepage-post-title-and-user {
   justify-content: space-between;
@@ -23,5 +15,6 @@
 }
 
 .homepage-post-title-and-user h5 {
-  font-weight: 300;
+  font-weight: 400;
+  font-size: 0.875rem;
 }
