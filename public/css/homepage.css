@@ -1,4 +1,27 @@
+/* Post List */
+.homepage-post-list {
+  gap: 3rem;
+}
+
+/* Post Container */
 .homepage-post-container {
   padding: 1rem;
-  background-color: #67e8f9;
+  border: 1px solid #67e8f9;
+  border-radius: 15px;
+  background-color: #ecfeff;
+}
+
+/* Post Title And User  */
+.homepage-post-title-and-user {
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.homepage-post-title-and-user h4 {
+  font-weight: 400;
+  font-size: 1.375rem;
+}
+
+.homepage-post-title-and-user h5 {
+  font-weight: 300;
 }
