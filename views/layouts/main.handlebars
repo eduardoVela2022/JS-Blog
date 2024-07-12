@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="/css/reset.css" />
     <link rel="stylesheet" href="/css/generic.css" />
     <link rel="stylesheet" href="/css/homepage.css" />
+    <link rel="stylesheet" href="/css/dashboard.css" />
+
   </head>
 
   {{! HTML Body }}
@@ -33,15 +35,19 @@
       <nav class="row navigation-bar">
         {{! Home Button }}
         <button>Home</button>
+        {{#if logged_in}}
+          {{! Dashboard Button }}
+          <button>Dashboard</button>
 
-        {{! Dashboard Button }}
-        <button>Dashboard</button>
+          {{! Log In Button }}
+          <button>Log Out</button>
+        {{else}}
+          {{! Log In Button }}
+          <button>Log In</button>
 
-        {{! Log In Button }}
-        <button>Log In</button>
-
-        {{! Log In Button }}
-        <button>Sign Up</button>
+          {{! Log In Button }}
+          <button>Sign Up</button>
+        {{/if}}
       </nav>
     </header>
 

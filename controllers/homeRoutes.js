@@ -26,14 +26,14 @@ router.get("/dashboard", async (req, res) => {
   try {
     // Gets all the posts from the database that contain the logged in user's id
     const postData = await Post.findAll({
-      where: { userId: req.session.user_id },
+      where: { userId: 1 },
     });
 
     // Converts the obtained posts into plain objects
     const posts = postData.map((post) => post.get({ plain: true }));
 
     // Renders the dashboard view with the obtained data
-    res.status(200).json(posts);
+    res.render("dashboard", { posts });
   } catch (err) {
     // Send error status, if something went wrong
     res.status(500).json(err);

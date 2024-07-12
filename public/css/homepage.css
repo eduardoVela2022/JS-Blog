@@ -3,6 +3,11 @@
   gap: 3rem;
 }
 
+/* Post List Item */
+.homepage-post-list-item {
+  cursor: pointer;
+}
+
 /* Post Title And User  */
 .homepage-post-title-and-user {
   justify-content: space-between;
