@@ -1,0 +1,20 @@
+{{! List Of Posts }}
+<h1 class="row main-container-title">Posts</h1>
+
+<ul class="column homepage-post-list">
+  {{! Post }}
+  {{#each posts as |post|}}
+    <li class="primary-container column homepage-post-list-item">
+      <div class="row homepage-post-title-and-user">
+        {{! Post Title }}
+        <h4>{{post.title}}</h4>
+
+        {{! Post Owner }}
+        <h5>Posted by: {{post.user.username}}</h5>
+      </div>
+
+      {{! Post Content }}
+      <p>{{post.content}}</p>
+    </li>
+  {{/each}}
+</ul>

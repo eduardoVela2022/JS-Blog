@@ -1,0 +1,151 @@
+/* Flex Column */
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Flex Row */
+.row {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Container */
+.container {
+  padding: 2rem 2rem;
+}
+
+/* Header Element */
+header {
+  background-color: #fde047;
+  justify-content: space-between;
+  border-bottom: 1px black solid;
+}
+
+header h3 {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+header button {
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+header button:hover {
+  text-decoration: underline;
+}
+
+/* Navigation Bar */
+.navigation-bar {
+  gap: 1.75rem;
+}
+
+/* Main Element*/
+main {
+  justify-content: center;
+  height: 125dvh;
+}
+
+/* Main Container */
+.main-container {
+  width: 65dvw;
+}
+
+/* Main Container Title */
+.main-container-title {
+  justify-content: center;
+  font-weight: 300;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+/* Footer */
+footer {
+  background-color: #fde047;
+  justify-content: center;
+  border-top: 1px black solid;
+}
+
+footer h6 {
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+/* Primary Button */
+.btn-primary {
+  padding: 0.5rem 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 900;
+  border-radius: 5px;
+  outline-color: #67e8f9;
+  outline-offset: 2px;
+  background-color: #67e8f9;
+  transition: background-color 0.5s ease;
+}
+
+.btn-primary:hover {
+  background-color: #a5f3fc;
+}
+
+.btn-primary:focus {
+  background-color: #a5f3fc;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  padding: 0.5rem 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 900;
+  border-radius: 5px;
+  outline-color: #d6d3d1;
+  outline-offset: 2px;
+  background-color: #d6d3d1;
+  transition: background-color 0.5s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #e7e5e4;
+}
+
+.btn-secondary:focus {
+  background-color: #e7e5e4;
+}
+
+/* Button Row */
+.btn-row {
+  justify-content: center;
+}
+
+/* Primary Container */
+.primary-container {
+  padding: 1rem;
+  border: 1px solid #67e8f9;
+  border-radius: 15px;
+  background-color: #ecfeff;
+}
+
+/* Input Field */
+.input-field {
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.input-field label {
+  width: 10dvw;
+  font-size: 1.375rem;
+}
+
+.input-field input {
+  padding: 0.5rem;
+  width: 55dvw;
+  outline: none;
+  border: 2px solid #0891b2;
+  border-radius: 5px;
+  transition: border 0.5s ease;
+}
+
+.input-field input:focus {
+  border: 2px solid #22d3ee;
+}

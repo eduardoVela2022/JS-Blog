@@ -1,0 +1,21 @@
+/* Post List */
+.dashboard-post-list {
+  gap: 2rem;
+}
+
+/* Post List Item */
+.dashboard-post-list-item {
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dashboard-post-list-item h4 {
+  font-weight: 400;
+  font-size: 1.375rem;
+}
+
+.dashboard-post-list-item h5 {
+  font-weight: 400;
+  font-size: 0.875rem;
+}
