@@ -157,3 +157,7 @@ textarea {
   resize: none;
   min-height: 15rem;
 }
+
+.input-field textarea:focus {
+  border: 2px solid var(--cyan-400);
+}
