@@ -14,7 +14,7 @@ router.post("/", async (req, res) => {
       req.session.logged_in = true;
 
       // Send success status
-      res.status(200).json(userData);
+      res.status(200).end();
     });
   } catch (err) {
     // Send error status, if something went wrong
@@ -25,17 +25,17 @@ router.post("/", async (req, res) => {
 // Logs in a user that already has an account
 router.post("/login", async (req, res) => {
   try {
-    // Tries to find a user with the given email in the database
-    const userData = await User.findOne({ where: { email: req.body.email } });
+    // Tries to find a user with the given username in the database
+    const userData = await User.findOne({
+      where: { username: req.body.username },
+    });
 
     // If no user was found, send error status and message and end the process
     if (!userData) {
-      res
-        .status(400)
-        .json({
-          message:
-            "The given email or password were incorrect. Please try again.",
-        });
+      res.status(400).json({
+        message:
+          "The given username or password were incorrect. Please try again.",
+      });
       return;
     }
 
@@ -44,12 +44,10 @@ router.post("/login", async (req, res) => {
 
     // If the password is not valid, send error status and message and end the process
     if (!validPassword) {
-      res
-        .status(400)
-        .json({
-          message:
-            "The given email or password were incorrect. Please try again.",
-        });
+      res.status(400).json({
+        message:
+          "The given username or password were incorrect. Please try again.",
+      });
       return;
     }
 
@@ -59,7 +57,7 @@ router.post("/login", async (req, res) => {
       req.session.logged_in = true;
 
       // Send success status
-      res.json({ user: userData, message: "You were logged in successfully!" });
+      res.status(200).end();
     });
   } catch (err) {
     // Send error status, if something went wrong

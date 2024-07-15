@@ -2,6 +2,14 @@
 :root {
   --website-background-color: #fafafa;
   --website-text-color: #0a0a0a;
+  --yellow-300: #fde047;
+  --cyan-50: #ecfeff;
+  --cyan-200: #a5f3fc;
+  --cyan-300: #67e8f9;
+  --cyan-400: #22d3ee;
+  --cyan-600: #0891b2;
+  --stone-200: #e7e5e4;
+  --stone-300: #d6d3d1;
 }
 
 /* Margin and padding is removed for all elements, and border box dox sizing is applied to them */

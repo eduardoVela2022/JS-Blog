@@ -18,9 +18,9 @@
 
 /* Header Element */
 header {
-  background-color: #fde047;
+  background-color: var(--yellow-300);
   justify-content: space-between;
-  border-bottom: 1px black solid;
+  border-bottom: 1px var(--website-text-color) solid;
 }
 
 header h3 {
@@ -31,6 +31,8 @@ header h3 {
 header button {
   font-weight: 400;
   font-size: 1.25rem;
+  outline-color: var(--website-text-color);
+  outline-offset: 4px;
 }
 
 header button:hover {
@@ -63,9 +65,9 @@ main {
 
 /* Footer */
 footer {
-  background-color: #fde047;
+  background-color: var(--yellow-300);
   justify-content: center;
-  border-top: 1px black solid;
+  border-top: 1px var(--website-text-color) solid;
 }
 
 footer h6 {
@@ -79,18 +81,18 @@ footer h6 {
   font-size: 1.125rem;
   font-weight: 900;
   border-radius: 5px;
-  outline-color: #67e8f9;
+  outline-color: var(--cyan-300);
   outline-offset: 2px;
-  background-color: #67e8f9;
+  background-color: var(--cyan-300);
   transition: background-color 0.5s ease;
 }
 
 .btn-primary:hover {
-  background-color: #a5f3fc;
+  background-color: var(--cyan-200);
 }
 
 .btn-primary:focus {
-  background-color: #a5f3fc;
+  background-color: var(--cyan-200);
 }
 
 /* Secondary Button */
@@ -99,18 +101,18 @@ footer h6 {
   font-size: 1.125rem;
   font-weight: 900;
   border-radius: 5px;
-  outline-color: #d6d3d1;
+  outline-color: var(--stone-300);
   outline-offset: 2px;
-  background-color: #d6d3d1;
+  background-color: var(--stone-300);
   transition: background-color 0.5s ease;
 }
 
 .btn-secondary:hover {
-  background-color: #e7e5e4;
+  background-color: var(--stone-200);
 }
 
 .btn-secondary:focus {
-  background-color: #e7e5e4;
+  background-color: var(--stone-200);
 }
 
 /* Button Row */
@@ -121,9 +123,9 @@ footer h6 {
 /* Primary Container */
 .primary-container {
   padding: 1rem;
-  border: 1px solid #67e8f9;
+  border: 1px solid var(--cyan-300);
   border-radius: 15px;
-  background-color: #ecfeff;
+  background-color: var(--cyan-50);
 }
 
 /* Input Field */
@@ -141,11 +143,11 @@ footer h6 {
   padding: 0.5rem;
   width: 55dvw;
   outline: none;
-  border: 2px solid #0891b2;
+  border: 2px solid var(--cyan-600);
   border-radius: 5px;
   transition: border 0.5s ease;
 }
 
 .input-field input:focus {
-  border: 2px solid #22d3ee;
+  border: 2px solid var(--cyan-400);
 }
