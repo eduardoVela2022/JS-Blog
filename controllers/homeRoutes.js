@@ -26,14 +26,14 @@ router.get("/dashboard", async (req, res) => {
   try {
     // Gets all the posts from the database that contain the logged in user's id
     const postData = await Post.findAll({
-      where: { userId: 1 },
+      where: { userId: req.session.user_id },
     });
 
     // Converts the obtained posts into plain objects
     const posts = postData.map((post) => post.get({ plain: true }));
 
     // Renders the dashboard view with the obtained data
-    res.render("dashboard", { posts });
+    res.render("dashboard", { posts, logged_in: req.session.logged_in });
   } catch (err) {
     // Send error status, if something went wrong
     res.status(500).json(err);
@@ -73,13 +73,13 @@ router.get("/login", (req, res) => {
   }
 
   // Else render the login view
-  res.render("login");
+  res.render("login", { logged_in: req.session.logged_in });
 });
 
 // This route is for the sign up view
 router.get("/sign-up", (req, res) => {
   // Render the sign up view
-  res.render("sign-up");
+  res.render("sign-up", { logged_in: req.session.logged_in });
 });
 
 // Exports

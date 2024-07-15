@@ -29,24 +29,26 @@
     {{! Header }}
     <header class="container row">
       {{! Header Title }}
-      <h3>The JavaScript Blog</h3>
+      <a href="/">
+        <h3>The JavaScript Blog</h3>
+      </a>
 
       {{! Navigation Bar }}
       <nav class="row navigation-bar">
         {{! Home Button }}
-        <button>Home</button>
+        <button id="navbar-home-btn">Home</button>
         {{#if logged_in}}
           {{! Dashboard Button }}
-          <button>Dashboard</button>
+          <button id="navbar-dashboard-btn">Dashboard</button>
 
           {{! Log In Button }}
-          <button>Log Out</button>
+          <button id="navbar-logout-btn">Log Out</button>
         {{else}}
           {{! Log In Button }}
-          <button>Log In</button>
+          <button id="navbar-login-btn">Log In</button>
 
           {{! Log In Button }}
-          <button>Sign Up</button>
+          <button id="navbar-sign-up-btn">Sign Up</button>
         {{/if}}
       </nav>
     </header>
@@ -63,4 +65,12 @@
       <h6>Made with ❤️ by Eduardo Sebastián Vela Alanís</h6>
     </footer>
   </body>
+
+  {{! Navigation Bar Scripts }}
+  <script src="/js/navbar.js"></script>
+  {{#if logged_in}}
+    <script src="/js/navBarLoggedIn.js"></script>
+  {{else}}
+    <script src="/js/navBarLoggedOut.js"></script>
+  {{/if}}
 </html>
