@@ -14,7 +14,7 @@ router.post("/", async (req, res) => {
       req.session.logged_in = true;
 
       // Send success status
-      res.status(200).json(userData);
+      res.status(200).end();
     });
   } catch (err) {
     // Send error status, if something went wrong
@@ -57,7 +57,7 @@ router.post("/login", async (req, res) => {
       req.session.logged_in = true;
 
       // Send success status
-      res.json({ user: userData, message: "You were logged in successfully!" });
+      res.status(200).end();
     });
   } catch (err) {
     // Send error status, if something went wrong

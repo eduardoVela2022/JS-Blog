@@ -1,8 +1,8 @@
 // View elements
 const loginUsernameInputField = document.querySelector("#login-username");
 const loginPasswordInputField = document.querySelector("#login-password");
-const loginLoginButton = document.querySelector("#login-btn");
-const loginCancelButton = document.querySelector("#cancel-btn");
+const loginLoginButton = document.querySelector("#login-login-btn");
+const loginCancelButton = document.querySelector("#login-cancel-btn");
 
 // Handles the log in submit event
 async function handleLogin(event) {
