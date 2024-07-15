@@ -1,3 +1,8 @@
+/* Create A New Post */
+.create-a-new-post {
+  justify-content: end;
+}
+
 /* Post List */
 .dashboard-post-list {
   gap: 2rem;
@@ -18,4 +23,8 @@
 .dashboard-post-list-item h5 {
   font-weight: 400;
   font-size: 0.875rem;
+}
+
+.empty-list-message {
+  justify-content: center;
 }
