@@ -64,22 +64,28 @@ router.get("/post/:id", async (req, res) => {
   }
 });
 
+// This route is for the create post form
+router.get("/create-post", (req, res) => {
+  // Render the create post view
+  res.render("create-post", { logged_in: req.session.logged_in });
+});
+
+// This route is for the modify and delete post form
+router.get("/modify-delete-post", (req, res) => {
+  // Render the modify and delete post form view
+  res.render("modify-delete-post", { logged_in: req.session.logged_in });
+});
+
 // This route is for the login view
 router.get("/login", (req, res) => {
-  // If the user is "logged in" in its session, redirect it to the dashboard
-  if (req.session.logged_in) {
-    res.redirect("/dashboard");
-    return;
-  }
-
-  // Else render the login view
-  res.render("login", { logged_in: req.session.logged_in });
+  // Render the login view
+  res.render("login");
 });
 
 // This route is for the sign up view
 router.get("/sign-up", (req, res) => {
   // Render the sign up view
-  res.render("sign-up", { logged_in: req.session.logged_in });
+  res.render("sign-up");
 });
 
 // Exports

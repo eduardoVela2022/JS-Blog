@@ -1,6 +1,10 @@
 {{! List Of Posts }}
 <h1 class="row main-container-title">Your Posts</h1>
 
+<div class="row create-a-new-post">
+  <button class="btn-primary">Create a new post</button>
+</div>
+
 <ul class="column dashboard-post-list">
   {{! Post }}
   {{#each posts as |post|}}
@@ -11,5 +15,9 @@
       {{! Post Owner }}
       <h5>Created on </h5>
     </li>
+  {{else}}
+    <div class="row empty-list-message">
+      <p>You have not made any posts yet.</p>
+    </div>
   {{/each}}
 </ul>

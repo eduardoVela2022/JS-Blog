@@ -1,0 +1,32 @@
+{{! Create Post Form }}
+<h1 class="row main-container-title">New Post</h1>
+
+<form class="primary-container column">
+  {{! Title Input Field }}
+  <div class="row input-field">
+    <label for="create-post-title">Title:</label>
+    <input id="create-post-title" type="text" />
+  </div>
+
+  {{! Content Input Field }}
+  <div class="row input-field">
+    <label for="create-post-content">Content:</label>
+    <textarea id="create-post-content"></textarea>
+  </div>
+
+  <div class="row btn-row">
+    {{! Create Button }}
+    <button
+      id="create-post-create-btn"
+      type="submit"
+      class="btn-primary"
+    >Create</button>
+
+    {{! Cancel Button }}
+    <button
+      id="create-post-cancel-btn"
+      type="button"
+      class="btn-secondary"
+    >Cancel</button>
+  </div>
+</form>
