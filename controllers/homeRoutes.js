@@ -43,7 +43,6 @@ router.get("/dashboard", async (req, res) => {
 // This route is for the post view
 router.get("/post/:id", async (req, res) => {
   try {
-    console.log(req.params.id);
     // Gets the post with the given id, along with the username of the user that created it and its comments
     const postData = await Post.findByPk(req.params.id, {
       include: [
@@ -53,10 +52,10 @@ router.get("/post/:id", async (req, res) => {
     });
 
     // Converts the obtained posts into plain objects
-    const posts = postData.get({ plain: true });
+    const post = postData.get({ plain: true });
 
     // Renders the post view with the obtained data
-    res.status(200).json(posts);
+    res.status(200).end();
   } catch (err) {
     console.log(err);
     // Send error status, if something went wrong
@@ -71,19 +70,37 @@ router.get("/create-post", (req, res) => {
 });
 
 // This route is for the modify and delete post form
-router.get("/modify-delete-post", (req, res) => {
-  // Render the modify and delete post form view
-  res.render("modify-delete-post", { logged_in: req.session.logged_in });
+router.get("/modify-delete-post/:id", async (req, res) => {
+  // Gets the post with the given id
+  const postData = await Post.findByPk(req.params.id);
+
+  // Converts the obtained post into a plain object
+  const post = postData.get({ plain: true });
+
+  // Render the modify and delete post form view with the obtained data
+  res.render("modify-delete-post", { post, logged_in: req.session.logged_in });
 });
 
 // This route is for the login view
 router.get("/login", (req, res) => {
+  // If user is already logged in, go to the homepage view
+  if (req.session.logged_in) {
+    res.redirect("/");
+    return;
+  }
+
   // Render the login view
   res.render("login");
 });
 
 // This route is for the sign up view
 router.get("/sign-up", (req, res) => {
+  // If user is already logged in, go to the homepage view
+  if (req.session.logged_in) {
+    res.redirect("/");
+    return;
+  }
+
   // Render the sign up view
   res.render("sign-up");
 });

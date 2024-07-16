@@ -17,7 +17,7 @@ Comment.init(
     },
     // Content
     content: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     // The user the comment belongs to

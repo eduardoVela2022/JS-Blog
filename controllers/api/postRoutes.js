@@ -1,6 +1,7 @@
 // Imports
 const router = require("express").Router();
-const { Post } = require("../../models");
+const { where } = require("sequelize");
+const { Post, Comment } = require("../../models");
 
 // This route creates a new post and stores it in the database
 router.post("/", async (req, res) => {
@@ -12,7 +13,7 @@ router.post("/", async (req, res) => {
     });
 
     // If the post was created successfully, send success message
-    res.status(200).json(newPost);
+    res.status(200).end();
   } catch (err) {
     // Send error status, if something went wrong
     res.status(400).json(err);
@@ -39,7 +40,7 @@ router.put("/:id", async (req, res) => {
     }
 
     // Else if it was found and updated, send success status
-    res.status(200).json(postData);
+    res.status(200).end();
   } catch (err) {
     // Send error status, if something went wrong
     res.status(500).json(err);
@@ -49,11 +50,17 @@ router.put("/:id", async (req, res) => {
 // This route deletes a post from the database
 router.delete("/:id", async (req, res) => {
   try {
-    // Finds the post that matches the given id and has the user's id
+    // Finds the comments that match the given post id
+    await Comment.destroy({
+      where: {
+        postId: req.params.id,
+      },
+    });
+
+    // Finds the post that match the given id
     const postData = await Post.destroy({
       where: {
         id: req.params.id,
-        userId: req.session.user_id,
       },
     });
 
@@ -66,7 +73,7 @@ router.delete("/:id", async (req, res) => {
     }
 
     // Else if it was found and deleted, send success status
-    res.status(200).json(postData);
+    res.status(200).end();
   } catch (err) {
     // Send error status, if something went wrong
     res.status(500).json(err);
