@@ -8,7 +8,7 @@
 <ul class="column dashboard-post-list">
   {{! Post }}
   {{#each posts as |post|}}
-    <li class="primary-container row dashboard-post-list-item">
+    <li id="{{post.id}}" class="primary-container row dashboard-post-list-item">
       {{! Post Title }}
       <h4>{{post.title}}</h4>
 

@@ -1,17 +1,21 @@
 {{! Modify And Delete Post Form }}
-<h1 class="row main-container-title">Post Title</h1>
+<h1 class="row main-container-title">{{post.title}}</h1>
 
 <form class="primary-container column">
   {{! Title Input Field }}
   <div class="row input-field">
     <label for="modify-and-delete-post-title">Title:</label>
-    <input id="modify-and-delete-post-title" type="text" />
+    <input
+      id="modify-and-delete-post-title"
+      type="text"
+      value="{{post.title}}"
+    />
   </div>
 
   {{! Content Input Field }}
   <div class="row input-field">
     <label for="modify-and-delete-post-content">Content:</label>
-    <textarea id="modify-and-delete-post-content"></textarea>
+    <textarea id="modify-and-delete-post-content">{{post.content}}</textarea>
   </div>
 
   <div class="row btn-row">
@@ -28,5 +32,12 @@
       type="button"
       class="btn-secondary"
     >Delete</button>
+
+    {{! Go Back Button }}
+    <button
+      id="modify-and-delete-post-delete-btn"
+      type="button"
+      class="btn-secondary"
+    >Go Back</button>
   </div>
 </form>

@@ -12,7 +12,7 @@ router.post("/", async (req, res) => {
     });
 
     // If the post was created successfully, send success message
-    res.status(200).json(newPost);
+    res.status(200).end();
   } catch (err) {
     // Send error status, if something went wrong
     res.status(400).json(err);
@@ -39,7 +39,7 @@ router.put("/:id", async (req, res) => {
     }
 
     // Else if it was found and updated, send success status
-    res.status(200).json(postData);
+    res.status(200).end();
   } catch (err) {
     // Send error status, if something went wrong
     res.status(500).json(err);
@@ -66,7 +66,7 @@ router.delete("/:id", async (req, res) => {
     }
 
     // Else if it was found and deleted, send success status
-    res.status(200).json(postData);
+    res.status(200).end();
   } catch (err) {
     // Send error status, if something went wrong
     res.status(500).json(err);
