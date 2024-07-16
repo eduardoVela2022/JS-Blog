@@ -21,14 +21,14 @@ async function handleCreatePost(event) {
 
   // If the given title and content are not empty, continue
   if (title && content) {
-    // Tries to log in the user with the given username and password
+    // Tries to create a post with the given title and content
     const res = await fetch("/api/post/", {
       method: "POST",
       body: JSON.stringify({ title, content }),
       headers: { "Content-Type": "application/json" },
     });
 
-    // If the user was logged in successfully, go to the dashboard view
+    // If the post was created successfully, go to the dashboard view
     if (res.ok) {
       document.location.replace("/dashboard");
     } else {
@@ -37,7 +37,7 @@ async function handleCreatePost(event) {
     }
   } else {
     // Else send error message
-    alert("Please enter a username and password.");
+    alert("Please enter the title and content of the post.");
   }
 }
 

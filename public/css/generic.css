@@ -58,6 +58,7 @@ main {
 /* Main Container Title */
 .main-container-title {
   justify-content: center;
+  text-align: center;
   font-weight: 300;
   font-size: 4rem;
   margin-bottom: 2rem;

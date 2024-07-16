@@ -1,6 +1,7 @@
 // Imports
 const router = require("express").Router();
-const { Post } = require("../../models");
+const { where } = require("sequelize");
+const { Post, Comment } = require("../../models");
 
 // This route creates a new post and stores it in the database
 router.post("/", async (req, res) => {
@@ -49,11 +50,17 @@ router.put("/:id", async (req, res) => {
 // This route deletes a post from the database
 router.delete("/:id", async (req, res) => {
   try {
-    // Finds the post that matches the given id and has the user's id
+    // Finds the comments that match the given post id
+    await Comment.destroy({
+      where: {
+        postId: req.params.id,
+      },
+    });
+
+    // Finds the post that match the given id
     const postData = await Post.destroy({
       where: {
         id: req.params.id,
-        userId: req.session.user_id,
       },
     });
 
