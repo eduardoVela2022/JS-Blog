@@ -16,7 +16,7 @@ function goToModifyAndDeletePostView() {
 }
 
 // Event listeners
-// dashboardCreatePostButton.addEventListener("click", goToCreatePostView);
+dashboardCreatePostButton.addEventListener("click", goToCreatePostView);
 dashboardPostListItems.forEach((item) => {
   item.addEventListener("click", goToModifyAndDeletePostView);
 });
