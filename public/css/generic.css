@@ -121,6 +121,10 @@ footer h6 {
   justify-content: center;
 }
 
+.btn-row-end {
+  justify-content: end;
+}
+
 /* Primary Container */
 .primary-container {
   padding: 1rem;
@@ -161,4 +165,8 @@ textarea {
 
 .input-field textarea:focus {
   border: 2px solid var(--cyan-400);
+}
+
+.empty-list-message {
+  justify-content: center;
 }
