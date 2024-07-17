@@ -55,7 +55,7 @@ router.get("/post/:id", async (req, res) => {
     const post = postData.get({ plain: true });
 
     // Renders the post view with the obtained data
-    res.render("post");
+    res.render("post", { post });
   } catch (err) {
     console.log(err);
     // Send error status, if something went wrong

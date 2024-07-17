@@ -4,7 +4,10 @@
 <ul class="column homepage-post-list">
   {{! Post }}
   {{#each posts as |post|}}
-    <li class="primary-container column homepage-post-list-item">
+    <li
+      id="{{post.id}}"
+      class="primary-container column homepage-post-list-item"
+    >
       <div class="row homepage-post-title-and-user">
         {{! Post Title }}
         <h4>{{post.title}}</h4>
@@ -18,3 +21,6 @@
     </li>
   {{/each}}
 </ul>
+
+{{! Homepage Script }}
+<script src="/js/homepage.js"></script>
