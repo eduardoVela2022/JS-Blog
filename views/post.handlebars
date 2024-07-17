@@ -1,0 +1,28 @@
+{{! Post }}
+<h1 class="row main-container-title">Post Title</h1>
+
+{{! Create Comment Button }}
+<div class="row btn-row-end">
+  <button id="dashboard-create-post-btn" class="btn-primary">Create a new
+    comment</button>
+</div>
+
+{{! Post Content }}
+<div class="primary-container">
+  Post Content
+</div>
+
+{{! Post Comments }}
+<h2>Comments:</h2>
+
+<ul class="column">
+  {{! Comment }}
+  {{#each comments as |comment|}}
+    <li class="primary-container">Content</li>
+  {{else}}
+    {{! Empty List Message }}
+    <div class="row empty-list-message">
+      <p>You have not made any posts yet.</p>
+    </div>
+  {{/each}}
+</ul>

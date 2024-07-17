@@ -55,7 +55,7 @@ router.get("/post/:id", async (req, res) => {
     const post = postData.get({ plain: true });
 
     // Renders the post view with the obtained data
-    res.status(200).end();
+    res.render("post");
   } catch (err) {
     console.log(err);
     // Send error status, if something went wrong
@@ -79,6 +79,12 @@ router.get("/modify-delete-post/:id", async (req, res) => {
 
   // Render the modify and delete post form view with the obtained data
   res.render("modify-delete-post", { post, logged_in: req.session.logged_in });
+});
+
+// This route is for the create comment form
+router.get("/create-comment", (req, res) => {
+  // Render the create comment view
+  res.render("create-comment", { logged_in: req.session.logged_in });
 });
 
 // This route is for the login view
