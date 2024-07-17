@@ -1,0 +1,29 @@
+{{! Create Comment Form }}
+<h1 class="row main-container-title">New Comment</h1>
+
+<form class="primary-container column">
+  {{! Content Input Field }}
+  <div class="row input-field">
+    <label for="create-comment-content">Content:</label>
+    <textarea id="create-comment-content"></textarea>
+  </div>
+
+  <div class="row btn-row">
+    {{! Create Button }}
+    <button
+      id="create-comment-create-btn"
+      type="submit"
+      class="btn-primary"
+    >Create</button>
+
+    {{! Cancel Button }}
+    <button
+      id="create-comment-cancel-btn"
+      type="button"
+      class="btn-secondary"
+    >Cancel</button>
+  </div>
+</form>
+
+{{! Create Comment Form Script }}
+<script src="/js/createComment.js"></script>

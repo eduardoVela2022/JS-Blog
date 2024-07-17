@@ -81,6 +81,12 @@ router.get("/modify-delete-post/:id", async (req, res) => {
   res.render("modify-delete-post", { post, logged_in: req.session.logged_in });
 });
 
+// This route is for the create comment form
+router.get("/create-comment", (req, res) => {
+  // Render the create comment view
+  res.render("create-comment", { logged_in: req.session.logged_in });
+});
+
 // This route is for the login view
 router.get("/login", (req, res) => {
   // If user is already logged in, go to the homepage view
