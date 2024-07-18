@@ -6,13 +6,14 @@ const routes = require("./controllers");
 const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const exphbs = require("express-handlebars");
+const helpers = require("./utils/helpers");
 
 // Express server
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Handlebars engine
-const hbs = exphbs.create({});
+// Handlebars engine with helper functions
+const hbs = exphbs.create({ helpers });
 
 // User session
 const sess = {
