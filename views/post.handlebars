@@ -3,7 +3,11 @@
 
 {{! Create Comment Button }}
 <div class="row btn-row-end">
-  <button id="post-create-comment-btn" class="btn-primary">Create a new comment</button>
+  <button
+    id="post-create-comment-btn"
+    data-post-id="{{post.id}}"
+    class="btn-primary"
+  >Create a new comment</button>
 </div>
 
 <div class="primary-container column">

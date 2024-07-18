@@ -82,9 +82,12 @@ router.get("/modify-delete-post/:id", async (req, res) => {
 });
 
 // This route is for the create comment form
-router.get("/create-comment", (req, res) => {
-  // Render the create comment view
-  res.render("create-comment", { logged_in: req.session.logged_in });
+router.get("/create-comment/:id", (req, res) => {
+  // Render the create comment form with the obtained data
+  res.render("create-comment", {
+    postId: req.params.id,
+    logged_in: req.session.logged_in,
+  });
 });
 
 // This route is for the login view

@@ -3,10 +3,10 @@ const postCreateCommentButton = document.querySelector(
   "#post-create-comment-btn"
 );
 
-// Redirects the user to the create post view
+// Redirects the user to the create comment view
 function goToCreateCommentView() {
   // Go to the create post view
-  document.location.assign("/create-comment");
+  document.location.assign(`/create-comment/${this.dataset.postId}`);
 }
 
 // Event listeners
