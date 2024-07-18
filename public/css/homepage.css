@@ -8,6 +8,10 @@
   cursor: pointer;
 }
 
+.homepage-post-list p {
+  white-space: pre-wrap;
+}
+
 /* Post Title And User  */
 .homepage-post-title-and-user {
   justify-content: space-between;
