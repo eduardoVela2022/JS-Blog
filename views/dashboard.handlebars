@@ -14,7 +14,7 @@
       <h4>{{post.title}}</h4>
 
       {{! Post Owner }}
-      <h5>Created on </h5>
+      <h5>Created on {{format_date post.createdAt}}</h5>
     </li>
   {{else}}
     {{! Empty List Message }}
