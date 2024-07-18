@@ -1,15 +1,21 @@
 {{! Post }}
-<h1 class="row main-container-title">Post Title</h1>
+<h1 class="row main-container-title">{{post.title}}</h1>
 
 {{! Create Comment Button }}
 <div class="row btn-row-end">
-  <button id="dashboard-create-post-btn" class="btn-primary">Create a new
-    comment</button>
+  <button
+    id="post-create-comment-btn"
+    data-post-id="{{post.id}}"
+    class="btn-primary"
+  >Create a new comment</button>
 </div>
 
-{{! Post Content }}
-<div class="primary-container">
-  Post Content
+<div class="primary-container column">
+  {{! Post Content }}
+  <p>{{post.content}}</p>
+
+  {{! Post User Username }}
+  <p>Posted by: {{post.user.username}}</p>
 </div>
 
 {{! Post Comments }}
@@ -17,8 +23,8 @@
 
 <ul class="column">
   {{! Comment }}
-  {{#each comments as |comment|}}
-    <li class="primary-container">Content</li>
+  {{#each post.comments as |comment|}}
+    <li class="primary-container">{{comment.content}}</li>
   {{else}}
     {{! Empty List Message }}
     <div class="row empty-list-message">
@@ -26,3 +32,6 @@
     </div>
   {{/each}}
 </ul>
+
+{{! Post Script }}
+<script src="/js/post.js"></script>

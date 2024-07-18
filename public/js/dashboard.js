@@ -7,11 +7,12 @@ const dashboardPostListItems = document.querySelectorAll("li");
 // Redirects the user to the create post view
 function goToCreatePostView() {
   // Go to the create post view
-  document.location.assign("create-post");
+  document.location.assign("/create-post");
 }
 
 // Redirects the user to the modify and delete post view of the selected post
 function goToModifyAndDeletePostView() {
+  // Go to the modify and delete post view
   document.location.assign(`/modify-delete-post/${this.id}`);
 }
 
