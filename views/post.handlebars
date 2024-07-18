@@ -15,7 +15,7 @@
   <p>{{post.content}}</p>
 
   {{! Post User Username }}
-  <p>Posted by: {{post.user.username}}</p>
+  <p>Posted by {{post.user.username}} on {{format_date post.createdAt}}</p>
 </div>
 
 {{! Post Comments }}

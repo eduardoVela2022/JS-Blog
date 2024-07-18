@@ -170,3 +170,28 @@ textarea {
 .empty-list-message {
   justify-content: center;
 }
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 800px) {
+  /* Header Element */
+  header {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  /* Header Element */
+  header h3 {
+    font-size: 1.75rem;
+  }
+
+  header button {
+    font-size: 1rem;
+  }
+
+  /* Navigation Bar */
+  .navigation-bar {
+    flex-direction: column;
+    align-items: start;
+  }
+}
