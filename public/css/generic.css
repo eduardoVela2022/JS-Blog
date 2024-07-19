@@ -205,7 +205,7 @@ textarea {
   }
 }
 
-/* These media queries are for the main container and scroll list */
+/* These media queries are for the main container, main container title and scroll list */
 /* Increases the width of the main container */
 @media screen and (max-width: 1440px) {
   /* Main Container */
@@ -224,6 +224,13 @@ textarea {
   /* Scroll List */
   .scroll-list {
     scrollbar-width: none;
+  }
+}
+
+/* Decreases the font size of the title of the main container */
+@media screen and (max-width: 450px) {
+  .main-container-title {
+    font-size: 3rem;
   }
 }
 

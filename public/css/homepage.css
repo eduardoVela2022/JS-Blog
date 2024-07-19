@@ -29,7 +29,7 @@
 }
 
 /* MEDIA QUERIES */
-/* Decreases the font size of the h4 and h5 headers of the post title and user elements */
+/* Decreases the font size of the h4 and h5 headers of the post title and user */
 @media screen and (max-width: 450px) {
   /* Post Title And User  */
   .homepage-post-title-and-user h4 {
