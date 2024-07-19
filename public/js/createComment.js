@@ -35,7 +35,7 @@ async function handleCreateComment(event) {
     }
   } else {
     // Else send error message
-    alert("Please enter the title and content of the post.");
+    alert("Please enter the title and content of the comment.");
   }
 }
 
