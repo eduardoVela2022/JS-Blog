@@ -1,6 +1,7 @@
 /* Post List */
 .dashboard-post-list {
   gap: 2rem;
+  margin-bottom: 12rem;
 }
 
 /* Post List Item */

@@ -10,28 +10,30 @@
   >Create a new comment</button>
 </div>
 
-<div class="primary-container column">
-  {{! Post Content }}
-  <p>{{post.content}}</p>
+<div class="column scroll-list">
+  <div class="primary-container column">
+    {{! Post Content }}
+    <p class="with-white-spaces">{{post.content}}</p>
 
-  {{! Post User Username }}
-  <p>Posted by {{post.user.username}} on {{format_date post.createdAt}}</p>
+    {{! Post User Username }}
+    <p>Posted by {{post.user.username}} on {{format_date post.createdAt}}</p>
+  </div>
+
+  {{! Post Comments }}
+  <h2 class="comments-header">Comments:</h2>
+
+  <ul class="column comments-list">
+    {{! Comment }}
+    {{#each post.comments as |comment|}}
+      <li class="primary-container with-white-spaces">{{comment.content}}</li>
+    {{else}}
+      {{! Empty List Message }}
+      <div class="row empty-list-message">
+        <p>This post doesn't have any comments yet.</p>
+      </div>
+    {{/each}}
+  </ul>
 </div>
-
-{{! Post Comments }}
-<h2>Comments:</h2>
-
-<ul class="column">
-  {{! Comment }}
-  {{#each post.comments as |comment|}}
-    <li class="primary-container">{{comment.content}}</li>
-  {{else}}
-    {{! Empty List Message }}
-    <div class="row empty-list-message">
-      <p>This post doesn't have any comments yet.</p>
-    </div>
-  {{/each}}
-</ul>
 
 {{! Post Script }}
 <script src="/js/post.js"></script>

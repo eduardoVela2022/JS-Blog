@@ -172,6 +172,11 @@ textarea {
   overflow: auto;
 }
 
+/* With White Spaces */
+.with-white-spaces {
+  white-space: pre-wrap;
+}
+
 /* Empty List Message */
 .empty-list-message {
   justify-content: center;

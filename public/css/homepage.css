@@ -1,15 +1,12 @@
 /* Post List */
 .homepage-post-list {
   gap: 3rem;
+  margin-bottom: 12rem;
 }
 
 /* Post List Item */
 .homepage-post-list-item {
   cursor: pointer;
-}
-
-.homepage-post-list p {
-  white-space: pre-wrap;
 }
 
 /* Post Title And User  */
