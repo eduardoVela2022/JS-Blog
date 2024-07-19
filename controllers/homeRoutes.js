@@ -1,6 +1,7 @@
 // Imports
 const router = require("express").Router();
 const { Post, User, Comment } = require("../models");
+const withAuth = require("../utils/auth");
 
 // This route is for the homepage view
 router.get("/", async (req, res) => {
@@ -22,7 +23,7 @@ router.get("/", async (req, res) => {
 });
 
 // This route is for the dashboard view
-router.get("/dashboard", async (req, res) => {
+router.get("/dashboard", withAuth, async (req, res) => {
   try {
     // Gets all the posts from the database that contain the logged in user's id
     const postData = await Post.findAll({
@@ -64,13 +65,13 @@ router.get("/post/:id", async (req, res) => {
 });
 
 // This route is for the create post form
-router.get("/create-post", (req, res) => {
+router.get("/create-post", withAuth, (req, res) => {
   // Render the create post view
   res.render("create-post", { logged_in: req.session.logged_in });
 });
 
 // This route is for the modify and delete post form
-router.get("/modify-delete-post/:id", async (req, res) => {
+router.get("/modify-delete-post/:id", withAuth, async (req, res) => {
   // Gets the post with the given id
   const postData = await Post.findByPk(req.params.id);
 
@@ -82,7 +83,7 @@ router.get("/modify-delete-post/:id", async (req, res) => {
 });
 
 // This route is for the create comment form
-router.get("/create-comment/:id", (req, res) => {
+router.get("/create-comment/:id", withAuth, (req, res) => {
   // Render the create comment form with the obtained data
   res.render("create-comment", {
     postId: req.params.id,
