@@ -167,11 +167,19 @@ textarea {
   border: 2px solid var(--cyan-400);
 }
 
+/* Scroll List */
+.scroll-list {
+  overflow: auto;
+}
+
+/* Empty List Message */
 .empty-list-message {
   justify-content: center;
 }
 
 /* MEDIA QUERIES */
+/* These media queries are for the header and navigation bar */
+/* Changes the navigation bar to a column */
 @media screen and (max-width: 800px) {
   /* Header Element */
   header {
@@ -179,6 +187,7 @@ textarea {
   }
 }
 
+/* Decreases the font size of the h3 header and buttons of the header, and changes the navigation bar into a column */
 @media screen and (max-width: 450px) {
   /* Header Element */
   header h3 {
@@ -193,5 +202,35 @@ textarea {
   .navigation-bar {
     flex-direction: column;
     align-items: start;
+  }
+}
+
+/* These media queries are for the main container and scroll list */
+/* Increases the width of the main container */
+@media screen and (max-width: 1440px) {
+  /* Main Container */
+  .main-container {
+    width: 75dvw;
+  }
+}
+
+/* Increases the width of the main container and hides the scrollbar in the mobile views */
+@media screen and (max-width: 800px) {
+  /* Main Container */
+  .main-container {
+    width: 85dvw;
+  }
+
+  /* Scroll List */
+  .scroll-list {
+    scrollbar-width: none;
+  }
+}
+
+/* This media query is for the footer */
+/* Decreases the font size of the h6 header of the footer */
+@media screen and (max-width: 450px) {
+  footer h6 {
+    font-size: 0.75rem;
   }
 }

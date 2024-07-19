@@ -37,8 +37,7 @@ In summary, TypeScript builds upon JavaScript by adding optional static typing, 
   },
   {
     title: "The main features of JavaScript ES6",
-    content: `
-ECMAScript 6 (ES6), also known as ECMAScript 2015, brought significant enhancements to JavaScript. Here are the main features introduced in ES6:
+    content: `ECMAScript 6 (ES6), also known as ECMAScript 2015, brought significant enhancements to JavaScript. Here are the main features introduced in ES6:
 
 1. let and const Declarations:
    - let allows block-scoped variable declarations.
@@ -96,9 +95,7 @@ These features introduced in ES6 (ECMAScript 2015) have significantly enhanced J
   },
   {
     title: "The most popular JavaScript front end frameworks and libraries",
-    content: `
-
-Several JavaScript front-end frameworks have gained popularity due to their features and capabilities. Here are some of the most popular ones along with their key features:
+    content: `Several JavaScript front-end frameworks have gained popularity due to their features and capabilities. Here are some of the most popular ones along with their key features:
 
 1. React:
    - Features:
@@ -156,8 +153,7 @@ Each of these frameworks has its strengths and is suitable for different types o
   {
     title:
       "Reasons why JavaScript is a popular programming language for web development",
-    content: `
-JavaScript is highly popular for web development due to several key reasons:
+    content: `JavaScript is highly popular for web development due to several key reasons:
 
 1. Client-Side Interactivity:
    - JavaScript runs in the browser, enabling dynamic and interactive web pages.

@@ -27,3 +27,16 @@
   font-weight: 400;
   font-size: 0.875rem;
 }
+
+/* MEDIA QUERIES */
+/* Decreases the font size of the h4 and h5 headers of the post title and user elements */
+@media screen and (max-width: 450px) {
+  /* Post Title And User  */
+  .homepage-post-title-and-user h4 {
+    font-size: 1.125rem;
+  }
+
+  .homepage-post-title-and-user h5 {
+    font-size: 0.75rem;
+  }
+}
