@@ -234,3 +234,34 @@ textarea {
     font-size: 0.75rem;
   }
 }
+
+/* This media queries are for the input fields */
+/* Increases the width of the label, input, and text area of the input field */
+@media screen and (max-width: 1440px) {
+  /* Input Field */
+  .input-field label {
+    width: 15dvw;
+  }
+
+  .input-field input,
+  textarea {
+    width: 60dvw;
+  }
+}
+
+/* Increases the width of the label, input, and text area of the input field and changes it to a column */
+@media screen and (max-width: 800px) {
+  /* Input Field */
+  .input-field {
+    flex-direction: column;
+  }
+
+  .input-field label {
+    width: 75dvw;
+  }
+
+  .input-field input,
+  textarea {
+    width: 75dvw;
+  }
+}
