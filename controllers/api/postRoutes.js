@@ -1,13 +1,12 @@
 // Imports
 const router = require("express").Router();
-const { where } = require("sequelize");
 const { Post, Comment } = require("../../models");
 
 // This route creates a new post and stores it in the database
 router.post("/", async (req, res) => {
   try {
     // Creates new post and saves it to the database
-    const newPost = await Post.create({
+    await Post.create({
       ...req.body,
       userId: req.session.user_id,
     });
