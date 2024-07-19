@@ -219,7 +219,8 @@ textarea {
   }
 }
 
-/* Increases the width of the main container and hides the scrollbar in the mobile views */
+/* Increases the width of the main container 
+,and hides the scrollbar and decreases the font size of the title of the main container in the mobile views */
 @media screen and (max-width: 800px) {
   /* Main Container */
   .main-container {
@@ -230,10 +231,8 @@ textarea {
   .scroll-list {
     scrollbar-width: none;
   }
-}
 
-/* Decreases the font size of the title of the main container */
-@media screen and (max-width: 450px) {
+  /* Main Container Title */
   .main-container-title {
     font-size: 3rem;
   }
