@@ -1,0 +1,11 @@
+/* Comments Header */
+.comments-header {
+  font-weight: 300;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+/* Comments List */
+.comments-list {
+  margin-bottom: 12rem;
+}

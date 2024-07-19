@@ -1,12 +1,12 @@
 /* Post List */
 .dashboard-post-list {
   gap: 2rem;
+  margin-bottom: 12rem;
 }
 
 /* Post List Item */
 .dashboard-post-list-item {
-  justify-content: space-between;
-  align-items: center;
+  align-items: start;
   cursor: pointer;
 }
 
@@ -18,4 +18,17 @@
 .dashboard-post-list-item h5 {
   font-weight: 400;
   font-size: 0.875rem;
+}
+
+/* MEDIA QUERIES */
+/* Decreases the font size of the h4 and h5 headers of the post list item */
+@media screen and (max-width: 450px) {
+  /* Post List Item */
+  .dashboard-post-list-item h4 {
+    font-size: 1.125rem;
+  }
+
+  .dashboard-post-list-item h5 {
+    font-size: 0.75rem;
+  }
 }
