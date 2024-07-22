@@ -66,6 +66,16 @@ To delete a post, you need to first select the post you want to delete, by click
 ![“The form to modify and delete a post filled with the pop-up to confirm if the user wants to delete the post”](./images/DeletePostPopUp.png)
 ![“The dashboard of the user without the deleted post”](./images/EmptyDashboard.png)
 
+### Creating a comment
+
+To create a comment select one of the post of the homepage to go to that post’s page. Then click on the “Create a new comment” button found on it. Then fill out the form to create a new comment and click on its “Create” button, to create the comment. If the comment was created successfully, you will be redirected to the page of the post you selected, where you will find the comment you created on its comment section.
+
+![“The homepage of The JavaScript Blog”](./images/Homepage.png)
+![“The page of the selected post”](./images/SelectedPostPage.png)
+![“The form to create a new comment”](./images/NewCommentForm.png)
+![“The form to create a new comment filled with the content of the new post”](./images/FilledNewCommentForm.png)
+![“The comment section of the page of the selected post showing the newly created comment”](./images/SelectedPostPageWithNewComment.png)
+
 ## Credits
 
 The sample data of the posts and comments was provided by ChatGPT:
