@@ -2,12 +2,20 @@
 
 ## Description
 
-The JavaScript Blog is a simple blog website were you can post about JavaScript topics, and comment on the posts of others. The reason I built this project was to practice the MVC architecture, since the project is divided into models, views and controllers. The models are the ones that control the shape of the data the web application handles, the views how the user interface of the application will look like, the controllers the routes and API routes that are available. During the development of this project, I learned how the different parts of a full stack application interact with each other, and that each part is essential for it to work properly, since if the models, views or controllers of the application are flawed, the flawed components will affect the functionality of other components an so on.
+The JavaScript Blog is a simple blog website were you can post about JavaScript topics, and comment on the posts of others. The reason I built this project was to practice the MVC architecture, since the project's files are divided into models, views and controllers. The models are the ones that control the shape of the data the web application handles, the views how the user interfaces of the web application will look like, and the controllers the routes and API routes that are available. During the development of this project, I learned how the different parts of a full stack web application interact with each other, and that each part is essential for it to work properly, since if the models, views or controllers of the web application are flawed, the flawed components will affect the functionality of other components an so on.
 
 ## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
+
+  - [Sign up](#sign-up)
+  - [Log in](#log-in)
+  - [Create a post](#creating-a-post)
+  - [Modifying a post](#modifying-a-post)
+  - [Deleting a post](#deleting-a-post)
+  - [Creating a comment](#creating-a-comment)
+
 - [Credits](#credits)
 - [License](#license)
 
@@ -23,7 +31,7 @@ This link will redirect you to the homepage of The JavaScript Blog which is the 
 
 ### Sign Up
 
-To sign up click on the “Sign Up” button, which is located in the header. This button will redirect you to the sign up page of the website. In here you can create a new account, by entering a new username and password into the sign up form of the website and clicking its “Sign In” button. If you were signed up successfully, you will be redirected to the dashboard page of the website.
+To sign up click on the “Sign Up” button, which is located in the header. This button will redirect you to the sign up page of the website. In here you can create a new account, by entering a new username and password into the sign up form of the website and clicking its “Sign In” button. If you were signed up successfully, you will be redirected to the dashboard page of your new account.
 
 ![“The sign up form of the website”](./images/SignUpForm.png)
 ![“The sign up form filled with the username and password of a new user”](./images/FilledSignUpForm.png)
@@ -31,7 +39,7 @@ To sign up click on the “Sign Up” button, which is located in the header. Th
 
 ### Log In
 
-To log in click on the “Log In” button, which is located in the header. This button will redirect you to the log in page of the website. In here you can log in, by entering your username and password into the log in form of the website and clicking its “Log In” button. If you were logged in successfully, you will be redirected to the dashboard of the website.
+To log in click on the “Log In” button, which is located in the header. This button will redirect you to the log in page of the website. In here you can log in, by entering your username and password into the log in form of the website and clicking its “Log In” button. If you were logged in successfully, you will be redirected to the dashboard of your account.
 
 ![“The log in form of the website”](./images/LogInForm.png)
 ![“The log in form filled with the username and password of a user”](./images/FilledLogInForm.png)
@@ -68,7 +76,7 @@ To delete a post, you need to first select the post you want to delete, by click
 
 ### Creating a comment
 
-To create a comment select one of the post of the homepage to go to that post’s page. Then click on the “Create a new comment” button found on it. Then fill out the form to create a new comment and click on its “Create” button, to create the comment. If the comment was created successfully, you will be redirected to the page of the post you selected, where you will find the comment you created on its comment section.
+To create a comment select one of the posts of the homepage to go to that post’s page. Then click on the “Create a new comment” button found on it. Then fill out the form to create a new comment and click on its “Create” button, to create the comment. If the comment was created successfully, you will be redirected to the page of the post you selected, where you will find the comment you created on its comment section.
 
 ![“The homepage of The JavaScript Blog”](./images/Homepage.png)
 ![“The page of the selected post”](./images/SelectedPostPage.png)
@@ -78,7 +86,7 @@ To create a comment select one of the post of the homepage to go to that post’
 
 ## Credits
 
-The sample data of the posts and comments was provided by ChatGPT:
+The data of the sample posts and comments was provided by ChatGPT: https://chatgpt.com
 
 ## License
 
